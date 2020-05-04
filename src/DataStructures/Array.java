@@ -16,7 +16,7 @@ package DataStructures;
  * 7. isFull()
  * 8. Display()
  * 9. clearArray()
- * 
+ * 10. Insert(index, element)
  * @param <T>
  */
 
@@ -34,7 +34,6 @@ public class Array<T> {
 	}
 
 	public void add(T element){
-		index++;
 		if(isFull()){
 			//create a new array
 			size += (size/2);
@@ -42,6 +41,7 @@ public class Array<T> {
 			for(int i=0;i<=index;i++)
 				newArray[i] = array[i];
 		}
+		index++;
 		array[index] = element;
 	}
 	
@@ -75,7 +75,7 @@ public class Array<T> {
 	
 	
 	private boolean isFull() {
-		return index == size;
+		return index == size - 1;
 	}
 	
 	public void display(){
@@ -90,6 +90,19 @@ public class Array<T> {
 		index = -1;
 	}
 	
+	public void insert(int indexx, T element){
+		if(isFull()){
+			//create a new array
+			size += (size/2);
+			T[] newArray = (T[]) new Object[size];
+			for(int i=0;i<=index;i++)
+				newArray[i] = array[i];
+		}
+		index++;
+		for(int i = index; i>indexx ; i--)
+			array[i] = array[i-1];
+		array[indexx] = element;
+	}
 	
 	/**		Main Method		**/
 	public static void main(String[] args) {
@@ -126,6 +139,7 @@ public class Array<T> {
 		
 		a.clear();
 		a.add(10);
+		a.insert(0, 5);
 		a.display();
 	}
 	
@@ -145,6 +159,6 @@ public class Array<T> {
 	1 2 3 4 5 60 
 	2 3 4 5 60 
 	2 3 5 60 
-	10 
+	5 10 
 
 */
