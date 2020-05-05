@@ -38,6 +38,7 @@ public class Queue {
 		else{
 			rear++;
 			queueArray[rear] = element;
+			//Only re-arrange happens when the list reach its maximum limit and its starting elements are removed by dequeue()
 			if((rear == size -1) && (front!=0))
 				rearrangeQueue();
 		}
