@@ -103,7 +103,7 @@ public class DoubleLinkedList<T>{
 			node.prev.next = node;
 			size++;
 			
-			//using current node
+		//using current node
 		/*	Node<T> currentNode = getNode(index);
 			Node<T> n = new Node<T>();
 			n.data = data;
