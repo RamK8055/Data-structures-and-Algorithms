@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
 	1.	Add(index, element) --insert
 	2.	addLast(element) --append
-	3.	addFirst(element) –head
+	3.	addFirst(element) â€“head
 	4.	set(index, element)
 	5.	get(index)
 	6.	indexOf(element)
@@ -13,10 +13,10 @@ import java.util.Scanner;
 	8.	getFirstNode()
 	9.	getLastNode()
 	10.	removeAt(index)
-	11.	remove(element) – remove multiple element if exist
+	11.	remove(element) â€“ remove multiple element if exist
 	12.	size()
 	13.	isEmpty()
-	14.	display() –traverse all nodes
+	14.	display() â€“traverse all nodes
 	15.	clear() 
 */
 
@@ -83,7 +83,7 @@ public class LinkedList{
 	
 	//Change value of node
 	public void set(int index, String data){
-		if(index<size && index>0){
+		if(index<size && index>=0){
 			getNode(index).data = data;
 		}
 		else{
@@ -221,7 +221,7 @@ public class LinkedList{
 		System.out.println(""
 				+ "1.Add(index, element) --insert\n"
 				+ "2.addLast(element) --append\n"
-				+ "3.addFirst(element) –head\n"
+				+ "3.addFirst(element) â€“head\n"
 				+ "4.set(index, element)\n"
 				+ "5.get(index)\n"
 				+ "6.indexOf(element)\n"
@@ -229,10 +229,10 @@ public class LinkedList{
 				+ "8.~getFirstNode()\n"
 				+ "9.~getLastNode()\n"
 				+ "10.removeAt(index)\n"
-				+ "11.remove(element) – remove multiple element if exist\n"
+				+ "11.remove(element) â€“ remove multiple element if exist\n"
 				+ "12.~size()\n"
 				+ "13.~isEmpty()\n"
-				+ "14.~display() –traverse all nodes\n"
+				+ "14.~display() â€“traverse all nodes\n"
 				+ "15.clear()\n"		);
 		
 		while(true){
@@ -304,7 +304,7 @@ public class LinkedList{
 	OUTPUT:
 		1.Add(index, element) --insert
 		2.addLast(element) --append
-		3.addFirst(element) –head
+		3.addFirst(element) â€“head
 		4.set(index, element)
 		5.get(index)
 		6.indexOf(element)
@@ -312,10 +312,10 @@ public class LinkedList{
 		8.~getFirstNode()
 		9.~getLastNode()
 		10.removeAt(index)
-		11.remove(element) – remove multiple element if exist
+		11.remove(element) â€“ remove multiple element if exist
 		12.~size()
 		13.~isEmpty()
-		14.~display() –traverse all nodes
+		14.~display() â€“traverse all nodes
 		15.clear()
 		
 		Enter the choice: 1
