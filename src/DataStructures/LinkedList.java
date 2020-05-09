@@ -17,7 +17,7 @@ import java.util.Scanner;
 	12.	size()
 	13.	isEmpty()
 	14.	display() –traverse all nodes
-	15.	clear()
+	15.	clear() 
 */
 
 
