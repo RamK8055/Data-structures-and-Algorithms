@@ -93,7 +93,7 @@ public class LinkedList{
 	
 	//Get value of node
 	public String get(int i){
-		if(i<size && i>0)
+		if(i<size && i>=0)
 			return getNode(i).data;
 		return null;
 	}
@@ -137,7 +137,7 @@ public class LinkedList{
 	//Get index of the element
 	public int indexOf(String data){
 		Node node = head;
-		int index =0;
+		int index = 0;
 		while(index<size){
 			if(node.data.equals(data))	//used equals for string
 				return index;
