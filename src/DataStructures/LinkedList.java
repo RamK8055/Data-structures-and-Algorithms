@@ -34,8 +34,9 @@ class Node{
 //Implementation class
 public class LinkedList{	
 
-	private int size;
-	private Node head;
+	//Using protected to use this variables in extended methods
+	protected int size;
+	protected Node head;
 	public LinkedList(){
 		this.size = 0;
 		this.head = null;
