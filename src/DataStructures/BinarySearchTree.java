@@ -186,11 +186,11 @@ public class BinarySearchTree {
 		
 		BinarySearchTree bst = new BinarySearchTree();
 		/* 
-             5
-            / \
-            2  7
-            \   /\ 
-             3 6  8
+                                 5
+                                / \
+                                2  7
+                                \   /\ 
+                                 3 6  8
 		*/
 
 		//Search
@@ -271,4 +271,5 @@ public class BinarySearchTree {
 		5 3 7 6 8 
 		6 3 7 1 8 
 		6 3 8 1 
+
 */
