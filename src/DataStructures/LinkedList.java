@@ -2,6 +2,7 @@ package DataStructures;
 
 import java.util.Scanner;
 
+
 /*
 	1.	Add(index, element) --insert
 	2.	addLast(element) --append
@@ -209,9 +210,36 @@ public class LinkedList{
 		size = 0;
 	}
 	
-
-	
-	
+	//Reverse the linked list - with help of another list
+		public void reverse(){
+			Node newHead = null;
+			Node travelNode = head;
+			while(travelNode != null){
+				Node temp = new Node();
+				 temp.data = travelNode.data;
+				 temp.next = newHead;	//old top
+				newHead = temp;
+				
+				travelNode = travelNode.next;
+			}
+			head = newHead;
+		}
+		
+		//Reverse the linked list - without another list
+		//Concept is right, and have loggical issue to execute
+		public void reverse2(){
+			Node prevNode = null;
+			Node nextNode = null;
+			Node travelNode = head;
+			while(travelNode != null){
+				nextNode = travelNode.next;
+				travelNode.next = prevNode;
+				prevNode = travelNode;
+				travelNode = nextNode;
+			}
+		}
+		
+		
 	
 	
 	
@@ -234,7 +262,8 @@ public class LinkedList{
 				+ "12.~size()\n"
 				+ "13.~isEmpty()\n"
 				+ "14.~display() –traverse all nodes\n"
-				+ "15.clear()\n"		);
+				+ "15.reverse()\n"
+				+ "16.clear()\n"		);
 		
 		while(true){
 			System.out.print("Enter the choice: ");
@@ -287,6 +316,9 @@ public class LinkedList{
 				System.out.println(list.delete(data));
 				break;
 			case 15:
+				list.reverse();
+				break;
+			case 16:
 				list.clear();
 				break;
 			default:
