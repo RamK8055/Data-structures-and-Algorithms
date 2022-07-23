@@ -1,0 +1,37 @@
+# BEST SORTING ALGORITHM 
+# TIME: o(n * log(n))
+# SPACE: o(n)
+
+------------------------------
+Summary:
+1. splitting into half till reaching to 1 element (recursively)
+2. merge sorted array and it make the final result (recursively)
+-------------------------------
+
+mergeSort(nums, left, right):
+  if(left<right):
+    mid = left + (right-left)/2
+    mergeSort(nums, left, mid)
+    mergeSort(nums, mid+1, right)
+    merge(nums,left, mid, right)
+    
+merge(nums, left, mid, right):
+  tempLeft = new int[mid-left+2];
+  tempRight = new int[right-mid+1];
+  for(i = 0; i< mid-left; i++):
+    tempLeft[i] = nums[left+i];
+  for(i = 0; i< right-mid+1; i++):
+    tempRight[i] = nums[mid+1+i];
+  tempLeft[mid-left+1] = max(int);
+  tempRight[right-mid] = max(int);
+  start = end = 0
+  for(i = left; i<right; i++):
+    if(tempLeft[start] < tempRight[end]):
+      nums[i] = tempLeft[start++];
+    else:
+      num[i] = tempRight[end++];
+      
+ ---------------------------------
+ 
+ Call -> mergeSort(num[], 0, num.length-1)
+ 
